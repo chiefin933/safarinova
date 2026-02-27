@@ -18,6 +18,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { destinations, testimonials, blogPosts, stats } from "@/lib/data";
 import { toast } from "sonner";
+import { useAuth } from "@/_core/hooks/useAuth";
 
 // Animated counter hook
 function useCountUp(target: string, inView: boolean) {
@@ -173,6 +174,10 @@ const categories = [
 ];
 
 export default function Home() {
+  // The userAuth hooks provides authentication state
+  // To implement login/logout functionality, simply call logout() or redirect to getLoginUrl()
+  let { user, loading, error, isAuthenticated, logout } = useAuth();
+
   const [searchQuery, setSearchQuery] = useState("");
   const [searchDuration, setSearchDuration] = useState("");
   const [searchGuests, setSearchGuests] = useState("");
