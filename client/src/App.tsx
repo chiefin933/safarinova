@@ -13,7 +13,7 @@ import Destinations from "./pages/Destinations";
 import DestinationDetail from "./pages/DestinationDetail";
 import Booking from "./pages/Booking";
 import Dashboard from "./pages/Dashboard";
-import Admin from "./pages/Admin";
+import AdminAccess from "./components/AdminAccess";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import FAQ from "./pages/FAQ";
@@ -28,7 +28,7 @@ function Router() {
       <Route path="/destinations/:slug" component={DestinationDetail} />
       <Route path="/book/:slug" component={Booking} />
       <Route path="/dashboard" component={Dashboard} />
-      <Route path="/admin" component={Admin} />
+      <Route path="/admin" component={AdminAccess} />
       <Route path="/blog" component={Blog} />
       <Route path="/blog/:slug" component={BlogPost} />
       <Route path="/faq" component={FAQ} />
